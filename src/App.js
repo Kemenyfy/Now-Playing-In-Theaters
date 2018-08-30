@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  componentDidMount() {
+    fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=9fe2614f2b9d0f56b7e758ac2b8ef828")
+      .then(resp => resp.json())
+      .then(json => {
+        console.log(json)
+      })
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Now Playing in a Theater Near You</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+        <p>hjfkyxckj
         </p>
       </div>
     );
