@@ -9,17 +9,36 @@
 }
 
 .App-title {
-  font-size: .75em;
+  display: flex;
+  font-size: 1.25em;
 }
 
-.nowplaying {
-  background-image: url(./images/film-strip.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
+.allMovies {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100;
 }
 
 .nowPlaying {
-  display: block;
   display: flex;
   flex-direction: column;
+  margin: 1em;
+  border: dashed;
+  border-radius: 20px;
+}
+
+.pet-list {
+  display: flex;
+  flex-direction: column;
+  padding: .5em;
+  border-color: #a67762;
+  align-items: center;
+  width: 40%;
+  border: dashed;
+  border-radius: 20px;
+  padding: 1em;
+  margin: 1em;
 }
