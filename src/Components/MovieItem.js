@@ -7,8 +7,8 @@ class MovieItem extends Component {
         const image_width = this.props.imageWidth
         let movie = this.props.movie
         return (
-            <section className="movie">
-                <section className="movie-title">{movie.title}</section>
+            <section>
+                <section>{movie.title}</section>
                 <img 
                 src={imageURL + movie.poster_path} 
                 alt={movie.title} 

@@ -10,9 +10,7 @@ class RandomMovie extends Component {
             let randomMovies = movies[randomMovieIndex]
             return (
                 <section>
-                    <section>
-                        Featured Movie!
-                    </section>
+                    <h1>Featured Movie!</h1>
                     <section>
                         <Link to={{
                             pathname: `/Movie/${randomMovieIndex}`,
@@ -28,9 +26,7 @@ class RandomMovie extends Component {
         }
         else {
             return (
-                <section className="movie">
-                    Loading...
-                </section>
+                <section />
             )
         }
     }

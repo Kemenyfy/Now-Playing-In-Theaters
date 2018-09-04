@@ -6,6 +6,7 @@ class MovieList extends Component {
     render() {
         return (
             <section>
+                <h1>Now Playing</h1>
                 {this.props.movies.map((movie, i) => {
                     return (
                         <section className="nowPlaying" key={i}>

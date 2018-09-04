@@ -6,7 +6,7 @@ class Main extends Component {
 
     render() {
         return (
-            <div className="home-page">
+            <div>
                 <RandomMovie movies={this.props.movies} randomMovie={this.props.randomMovie} />
                 <MovieList movies={this.props.movies} />
             </div>
