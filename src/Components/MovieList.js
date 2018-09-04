@@ -10,7 +10,6 @@ class MovieList extends Component {
                     return (
                         <section className="nowPlaying" key={i}>
                             <Link
-
                                 to={{
                                     pathname: `/Movie/${i}`,
                                     state: {
@@ -18,7 +17,7 @@ class MovieList extends Component {
                                     }
                                 }}
                                 key={i}>
-                                <MovieItem key={i} movie={movie} imageWidth={250} />
+                                <MovieItem key={i} movie={movie} />
                             </Link>
                         </section>
                     );

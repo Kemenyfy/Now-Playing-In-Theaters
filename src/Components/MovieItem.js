@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500'
+const imageURL = 'https://image.tmdb.org/t/p/w500'
 
 class MovieItem extends Component {
     render() {
@@ -10,7 +10,7 @@ class MovieItem extends Component {
             <section className="movie">
                 <section className="movie-title">{movie.title}</section>
                 <img 
-                src={IMAGE_BASE_URL + movie.poster_path} 
+                src={imageURL + movie.poster_path} 
                 alt={movie.title} 
                 width={image_width}
                 />

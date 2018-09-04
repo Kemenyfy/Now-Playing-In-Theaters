@@ -20,7 +20,7 @@ class RandomMovie extends Component {
                                 movies: this.props.movies
                             }
                         }}>
-                            <MovieItem movie={randomMovies} imageWidth={150} />
+                            <MovieItem movie={randomMovies} />
                         </Link>
                     </section>
                 </section>
@@ -29,7 +29,7 @@ class RandomMovie extends Component {
         else {
             return (
                 <section className="movie">
-                    Waiting for the featured movie to load...
+                    Loading...
                 </section>
             )
         }

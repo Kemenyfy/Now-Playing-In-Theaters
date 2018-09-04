@@ -35,7 +35,7 @@ class App extends Component {
           <header className="App-header">
             <h1 className="App-title">Now Playing in a Theater Near You</h1>
           </header>
-          <RandomMovie movies={this.props.movies} randomMovie={this.props.randomMovie} />
+          <RandomMovie movies={this.state.movies} randomMovie={this.state.randomMovie} />
           <MovieList movies={this.state.movies} />
         </div>
       </Router>
