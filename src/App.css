@@ -10,35 +10,42 @@
 
 .App-title {
   display: flex;
-  font-size: 1.25em;
+  justify-content: center;
+
 }
 
+.image {
+  width: 100%;
+  height: auto;
+
+}
 .allMovies {
   display: flex;
   justify-content: center;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: 100;
+  width: 50%;
+  height: auto;
 }
 
 .nowPlaying {
   display: flex;
   flex-direction: column;
-  margin: 1em;
-  border: dashed;
+  margin-bottom: 1em;
+  padding: 10px;
+  border: solid;
   border-radius: 20px;
 }
 
-.pet-list {
+.randomMovie {
   display: flex;
+  justify-items: center;
   flex-direction: column;
-  padding: .5em;
-  border-color: #a67762;
-  align-items: center;
-  width: 40%;
-  border: dashed;
+  width: 75%;
+  height: auto;
+  margin-bottom: 1em;
+  border: solid;
   border-radius: 20px;
-  padding: 1em;
-  margin: 1em;
 }
+
