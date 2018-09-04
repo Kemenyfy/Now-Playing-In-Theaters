@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import MovieItem from './MovieItem'
 
 class MovieList extends Component {
     render() {
@@ -7,8 +9,17 @@ class MovieList extends Component {
                 {this.props.movies.map((movie, i) => {
                     return (
                         <section className="nowPlaying" key={i}>
-                            <header>{movie.original_title}</header>
-                            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="Movie Poster" />
+                            <Link
+
+                                to={{
+                                    pathname: `/Movie/${i}`,
+                                    state: {
+                                        movies: this.props.movies
+                                    }
+                                }}
+                                key={i}>
+                                <MovieItem key={i} movie={movie} imageWidth={250} />
+                            </Link>
                         </section>
                     );
                 })}

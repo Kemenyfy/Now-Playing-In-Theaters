@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 import MovieList from './Components/MovieList';
+import RandomMovie from './Components/RandomMovie'
 
 class App extends Component {
 
@@ -22,18 +24,21 @@ class App extends Component {
         this.setState({
           movies: moviesData.results,
           randomMovie: randomMovie
-      });
-    })
+        });
+      })
   }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Now Playing in a Theater Near You</h1>
-        </header>
-        <MovieList movies={this.state.movies} />
-      </div>
+      <Router>
+        <div className="App">
+          <header className="App-header">
+            <h1 className="App-title">Now Playing in a Theater Near You</h1>
+          </header>
+          <RandomMovie movies={this.props.movies} randomMovie={this.props.randomMovie} />
+          <MovieList movies={this.state.movies} />
+        </div>
+      </Router>
     );
   }
 }
