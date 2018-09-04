@@ -1,22 +1,17 @@
 import React, { Component } from 'react';
 
-const imageURL = 'https://image.tmdb.org/t/p/w500'
-
-class MovieItem extends Component {
+class MovieDetail extends Component {
     render() {
-        const image_width = this.props.imageWidth
-        let movie = this.props.movie
+        let movieId = this.props.match.params.movieId
+        let _movies = this.props.location.state.movies
         return (
-            <section className="movie">
-                <section className="movie-title">{movie.title}</section>
-                <img 
-                src={imageURL + movie.poster_path} 
-                alt={movie.title} 
-                width={image_width}
-                />
-            </section>
+            <div>
+                <span>{_movies[movieId].title}</span>
+                <p>Release Date: {_movies[movieId].release_date}</p>
+                <p>{_movies[movieId].overview}</p>
+            </div>
         );
     }
 }
 
-export default MovieItem;
+export default MovieDetail;

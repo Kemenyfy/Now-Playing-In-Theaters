@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import './App.css';
-import MovieList from './Components/MovieList';
-import RandomMovie from './Components/RandomMovie'
+import './App.css'
+import Main from './Components/Main'
+import MovieDetail from './Components/MovieDetail'
 
 class App extends Component {
 
@@ -35,8 +35,12 @@ class App extends Component {
           <header className="App-header">
             <h1 className="App-title">Now Playing in a Theater Near You</h1>
           </header>
-          <RandomMovie movies={this.state.movies} randomMovie={this.state.randomMovie} />
-          <MovieList movies={this.state.movies} />
+          <section>
+            <Switch>
+              <Route path="/" exact component={() => <Main movies={this.state.movies} randomMovie={this.state.randomMovie} />} />
+              <Route path="/Movie/:movieId" exact component={MovieDetail} />
+            </Switch>
+          </section>
         </div>
       </Router>
     );
